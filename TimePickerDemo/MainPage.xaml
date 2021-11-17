@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace TimePickerDemo "
+             x:Class=" TimePickerDemo.MainPage"
+             BackgroundColor="AliceBlue">
+    <StackLayout Margin="20">
+        <Label Text="Создание напоминания"
+               FontAttributes="bold"
+               HorizontalOptions="Center"
+               FontSize="40"
+               TextColor="Blue"/>
+        <Entry x:Name="Ent"
+               FontSize="30"
+               Placeholder="О чем Вам напомнить?"
+               FontAttributes="Bold"/>
+        <Label Text=" Выберите время"
+               FontAttributes="bold"
+               TextColor="black"
+               FontSize="30"/>
+        <TimePicker x:Name="TmPicker"
+                    FontSize="45"
+                    Time="14:00:00"
+                    Format="T"
+                    PropertyChanged="OnTimePickerChanged" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Включить таймер:"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   TextColor="black"/>
+            <Switch x:Name="Sw"
+                    HorizontalOptions="EndAndExpand"
+                    Toggled="OnSwitchToggled"
+                    ThumbColor="Blue" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
